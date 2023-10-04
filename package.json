@@ -1,16 +1,11 @@
 {
   "name": "to-do-node",
   "version": "1.0.0",
+  "type": "module",
   "main": "app.js",
   "license": "MIT",
   "author": "InkDar",
   "scripts": {
-    "start": "node ./app.js"
-  },
-  "dependencies": {
-    "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.2"
+    "start": "ts-node-esm ./app.ts"
   }
 }
