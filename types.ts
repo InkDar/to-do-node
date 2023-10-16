@@ -1,6 +1,7 @@
 export type ToDo = {
-  title: string,
-  description: string,
-  done: boolean,
-  deleted: boolean,
-}
+  id: number;
+  title: string;
+  description: string;
+  done: boolean;
+  deleted: boolean;
+};
