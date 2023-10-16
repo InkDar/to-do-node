@@ -1,16 +1,19 @@
 {
   "name": "to-do-node",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "./dist/app.js",
   "license": "MIT",
   "author": "InkDar",
   "scripts": {
-    "start": "node ./app.js"
+    "start": "tsc --outDir ./dist ./app.ts && node ./dist/app.js",
+    "dev": "concurrently -k \"tsc --watch --outDir ./dist ./app.ts\" \"nodemon ./dist/app.js\""
   },
   "dependencies": {
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.8.2"
+    "@types/node": "^20.8.2",
+    "concurrently": "^8.2.1",
+    "ts-node": "^10.9.1"
   }
 }
